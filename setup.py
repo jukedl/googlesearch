@@ -10,8 +10,9 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-	'beautifulsoup4',
+    'beautifulsoup4',
 	'lxml',
+    'unidecode',
 ]
 
 test_requirements = [
@@ -19,12 +20,13 @@ test_requirements = [
 
 setup(
     name='google-search',
-    version='1.0.0',
+    version='1.0.0.1',
     description="Library for scraping google search results",
     long_description=readme + '\n\n' + history,
     author="Anthony Hseb",
     author_email='anthony.hseb@hotmail.com',
     url='https://github.com/anthonyhseb/googlesearch',
+    
     packages=[
         'googlesearch',
     ],
@@ -42,6 +44,8 @@ setup(
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
     ],
     test_suite='tests',
     tests_require=test_requirements
